@@ -10,20 +10,21 @@ Initialize Laravel App:
 6. Use command 'php artisan migrate'
 7. Start your server 
 
-Route:list
-| Method   | URI            |      | Acton
-|          |                |      |
-| GET      | project        |      | App\Http\Controllers\ProjectController@index
-| POST     | project        |      | App\Http\Controllers\ProjectController@store
-| PUT      | project        |      | App\Http\Controllers\ProjectController@update
-| GET      | project/create |      | App\Http\Controllers\ProjectController@create
-| GET      | project/delete |      | App\Http\Controllers\ProjectController@deleteManager
-| GET      | project/{id}   |      | App\Http\Controllers\ProjectController@show
-| POST     | project/{id}   |      | App\Http\Controllers\ProjectController@update
-| DELETE   | project/{id}   |      | App\Http\Controllers\ProjectController@delete
-| GET      | reward         |      | App\Http\Controllers\RewardController@index
-| POST     | reward         |      | App\Http\Controllers\RewardController@store
-| GET      | reward/create  |      | App\Http\Controllers\RewardController@create
+Route:
+
+    | Method   | URI            |      | Acton
+    |          |                |      |
+    | GET      | project        |      | App\Http\Controllers\ProjectController@index
+    | POST     | project        |      | App\Http\Controllers\ProjectController@store
+    | PUT      | project        |      | App\Http\Controllers\ProjectController@update
+    | GET      | project/create |      | App\Http\Controllers\ProjectController@create
+    | GET      | project/delete |      | App\Http\Controllers\ProjectController@deleteManager
+    | GET      | project/{id}   |      | App\Http\Controllers\ProjectController@show
+    | POST     | project/{id}   |      | App\Http\Controllers\ProjectController@update
+    | DELETE   | project/{id}   |      | App\Http\Controllers\ProjectController@delete
+    | GET      | reward         |      | App\Http\Controllers\RewardController@index
+    | POST     | reward         |      | App\Http\Controllers\RewardController@store
+    | GET      | reward/create  |      | App\Http\Controllers\RewardController@create
 
 Models:
 
