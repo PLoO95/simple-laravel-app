@@ -41,7 +41,12 @@ class ProjectController extends Controller
         return 'update';
     }
     public function show($id){
-        if(!is_numeric($id)){
+        if($id == 'started' || $id == 'finished' || $id == 'draft')
+        {
+            $project = Project::where('status',$id)->get();
+            return $project;
+        }
+        else if(!is_numeric($id)){
             $api = new ApiResponse(400,'error','Invalid ID supplied');
             return $api->getData();
         }
@@ -51,8 +56,6 @@ class ProjectController extends Controller
             return $api->getData();
         }
         return $project;
-    }
-    public function findByStatus(){
     }
 
     public function create(){
