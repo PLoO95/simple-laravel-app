@@ -25,8 +25,9 @@ Route::get('/project/delete', [ProjectController::class, 'deleteManager']);
 
 Route::post('/project', [ProjectController::class, 'store']);
 Route::put('/project', [ProjectController::class, 'update']);
+Route::get('/project/findByStatus', [ProjectController::class, 'findByStatus']);
 Route::get('/project/{id}', [ProjectController::class, 'show']);
-Route::post('/project/{id}', [ProjectController::class, 'update']);
+Route::post('/project/{id}', [ProjectController::class, 'updateManager']);
 Route::delete('/project/{id}', [ProjectController::class, 'delete']);
 
 Route::get('/reward', [RewardController::class, 'index']);
