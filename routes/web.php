@@ -23,16 +23,13 @@ Route::get('/project', [ProjectController::class, 'index']);
 Route::get('/project/create', [ProjectController::class, 'create']);
 Route::get('/project/delete', [ProjectController::class, 'deleteManager']);
 
-
 Route::post('/project', [ProjectController::class, 'store']);
 Route::put('/project', [ProjectController::class, 'update']);
 Route::get('/project/{id}', [ProjectController::class, 'show']);
 Route::post('/project/{id}', [ProjectController::class, 'update']);
 Route::delete('/project/{id}', [ProjectController::class, 'delete']);
 
-
 Route::get('/reward', [RewardController::class, 'index']);
 Route::get('/reward/create', [RewardController::class, 'create']);
-
 
 Route::post('/reward', [RewardController::class, 'store']);

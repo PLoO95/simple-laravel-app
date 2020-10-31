@@ -37,9 +37,6 @@ class ProjectController extends Controller
         $respone = array('code' => 201, 'type' => 'success', 'message' => 'Created');
         return $respone;
     }
-    public function update(){
-        return 'update';
-    }
     public function show($id){
         if($id == 'started' || $id == 'finished' || $id == 'draft')
         {
@@ -58,6 +55,11 @@ class ProjectController extends Controller
         return $project;
     }
 
+    public function update($id){
+        $request->id;
+
+        return $request->id;
+    }
     public function create(){
         return view('project.create');
     }
