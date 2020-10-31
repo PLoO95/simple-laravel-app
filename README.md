@@ -1,6 +1,14 @@
 # simple-laravel-app
 simple-laravel-app
 
+Initialize Laravel App:
+1. clone repositiory to your http folder.
+2. set defoult routing to public foldar
+3. Copy .env.example to .env, and configurate database connection settings
+4. Use command 'composer install'
+5. Use command 'php artisan key:generate'
+6. Use command 'php artisan migrate'
+7. Start your server 
 
 php artisan route:list
 +--------+----------+----------------+------+------------------------------------------------------+------------+
