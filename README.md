@@ -2,13 +2,15 @@
 simple-laravel-app
 
 Initialize Laravel App:
-1. clone repositiory to your http folder.
+1. clone repositiory to your http folder
 2. set defoult routing to public foldar
 3. Copy .env.example to .env, and configurate database connection settings
-4. Use command 'composer install'
-5. Use command 'php artisan key:generate'
-6. Use command 'php artisan migrate'
-7. Start your server 
+4. Create database 'api' in your SQL server
+5. Use command 'composer install'
+6. Use command 'php artisan key:generate'
+7. Use command 'php artisan migrate'
+8. Start your server
+9. Check my work, use /project/create and /reward/create to add some data.
 
 Route:
 
@@ -19,6 +21,7 @@ Route:
     | PUT      | project        |      | App\Http\Controllers\ProjectController@update
     | GET      | project/create |      | App\Http\Controllers\ProjectController@create
     | GET      | project/delete |      | App\Http\Controllers\ProjectController@deleteManager
+    | GET|HEAD | project/findByStatus  | App\Http\Controllers\ProjectController@findByStatus
     | GET      | project/{id}   |      | App\Http\Controllers\ProjectController@show
     | POST     | project/{id}   |      | App\Http\Controllers\ProjectController@update
     | DELETE   | project/{id}   |      | App\Http\Controllers\ProjectController@delete
@@ -37,6 +40,8 @@ View:
     -project
         -create.blade.php <--> View to create project. After use send data as POST to /project
         -delete.blade.php <--> View to delete projects. Show all available projects. After use delete button, send DELETE to /project 
+        -findbystatus.blade.php <--> View to find project by status.
+        -update.blade.php <--> View to edit choosen project by ID.
     -project
         -create.blade.php <--> View to create reward. After use send data as POST to /reward
 
@@ -48,6 +53,7 @@ Controller
         delete($id)     <--> Delete Project where $id is same.
         show($id)       <--> Get data about Project where $id is same.
         show($status)   <--> Get data about Project where $status is same.
+        findByStatus()  <--> Return view, where you find project by status.
         update($request)<--> Update data when $request->id is exist in database
         create($r)      <--> Return create view. Simple form to send post with CSRF token.
         deleteManager() <--> Return delete view. List all available project with delete button. DELETE with CRFT token request.
